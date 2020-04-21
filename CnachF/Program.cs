@@ -26,12 +26,12 @@ namespace CnachF
                     case 1:
                         Console.WriteLine("Celsius wert: ");
                         celsius = int.Parse(Console.ReadLine());
-                        Console.WriteLine(Berechnung.CnachF(celsius));
+                        Console.WriteLine((Berechnung.CnachF(celsius)).ToString("0.0 Fahrenheit"));
                         break;
                     case 2:
                         Console.WriteLine("Fahrenheit wert: ");
                         fahrenheit = int.Parse(Console.ReadLine());
-                        Console.WriteLine(Berechnung.FnachC(fahrenheit));
+                        Console.WriteLine((Berechnung.FnachC(fahrenheit)).ToString("0.0 Celsius"));
                         break;
                 }
             }
