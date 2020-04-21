@@ -12,7 +12,7 @@ namespace CnachF
         static void Main(string[] args)
         {
             int wahl = 0;
-            int celsius, fahrenheit;
+            double celsius, fahrenheit;
 
             Console.WriteLine("Auswahl Konvertierungstyp");
             Console.WriteLine("1. Celsius --> Fahrenheit");
@@ -25,13 +25,13 @@ namespace CnachF
                 {
                     case 1:
                         Console.WriteLine("Celsius wert: ");
-                        celsius = int.Parse(Console.ReadLine());
-                        Console.WriteLine((Berechnung.CnachF(celsius)).ToString("0.0 Fahrenheit"));
+                        celsius = double.Parse(Console.ReadLine());
+                        Console.WriteLine("{0:F1}",(Berechnung.CnachF(celsius)));
                         break;
                     case 2:
                         Console.WriteLine("Fahrenheit wert: ");
-                        fahrenheit = int.Parse(Console.ReadLine());
-                        Console.WriteLine((Berechnung.FnachC(fahrenheit)).ToString("0.0 Celsius"));
+                        fahrenheit = double.Parse(Console.ReadLine());
+                        Console.WriteLine("{0:F1}", (Berechnung.FnachC(fahrenheit)));
                         break;
                 }
             }
@@ -40,8 +40,6 @@ namespace CnachF
                 Console.WriteLine("Syntax Error");
             }
             Console.ReadKey();
-
-
         }
     }
 }
